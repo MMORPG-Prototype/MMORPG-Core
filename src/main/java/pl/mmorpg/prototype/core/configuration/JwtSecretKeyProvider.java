@@ -1,4 +1,4 @@
-package pl.mmorpg.prototype.core.mmorpgcore.configuration;
+package pl.mmorpg.prototype.core.configuration;
 
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;

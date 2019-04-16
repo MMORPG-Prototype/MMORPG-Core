@@ -1,12 +1,13 @@
-package pl.mmorpg.prototype.core.mmorpgcore.configuration;
+package pl.mmorpg.prototype.core.configuration;
 
 import org.springframework.security.core.GrantedAuthority;
+import pl.mmorpg.prototype.data.entities.UserRole;
 
 public class RoleGrantedAuthority implements GrantedAuthority
 {
-	private final Role role;
+	private final UserRole role;
 
-	public RoleGrantedAuthority(Role role)
+	public RoleGrantedAuthority(UserRole role)
 	{
 		this.role = role;
 	}

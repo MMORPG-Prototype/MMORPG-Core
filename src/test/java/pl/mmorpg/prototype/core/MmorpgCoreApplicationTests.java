@@ -1,4 +1,4 @@
-package pl.mmorpg.prototype.core.mmorpgcore;
+package pl.mmorpg.prototype.core;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

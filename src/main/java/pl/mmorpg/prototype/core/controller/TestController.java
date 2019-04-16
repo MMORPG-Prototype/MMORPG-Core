@@ -1,4 +1,4 @@
-package pl.mmorpg.prototype.core.mmorpgcore.controller;
+package pl.mmorpg.prototype.core.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

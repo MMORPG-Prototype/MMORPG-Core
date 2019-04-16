@@ -1,4 +1,4 @@
-package pl.mmorpg.prototype.core.mmorpgcore.configuration;
+package pl.mmorpg.prototype.core.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;

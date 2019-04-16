@@ -1,4 +1,4 @@
-package pl.mmorpg.prototype.core.mmorpgcore.configuration;
+package pl.mmorpg.prototype.core.configuration;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

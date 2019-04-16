@@ -1,19 +1,17 @@
-package pl.mmorpg.prototype.core.mmorpgcore.configuration;
+package pl.mmorpg.prototype.core.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import pl.mmorpg.prototype.core.mmorpgcore.model.user.control.UserRepository;
-import pl.mmorpg.prototype.core.mmorpgcore.model.user.entity.User;
+import pl.mmorpg.prototype.data.entities.User;
+import pl.mmorpg.prototype.data.entities.repositories.UserRepository;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Configuration
 @DatabaseAuthentication
@@ -30,7 +28,7 @@ public class DatabaseUserDetailsService implements UserDetailsService
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
 	{
-		Optional<User> user = userService.findByUsername(username);
+		Optional<User> user = Optional.ofNullable(userService.findByUsername(username));
 		if (user.isEmpty())
 			throw new UsernameNotFoundException(username);
 		Collection<GrantedAuthority> grantedAuthorities = getGrantedAuthorities(user.get());

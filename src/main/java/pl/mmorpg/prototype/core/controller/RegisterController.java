@@ -1,11 +1,11 @@
-package pl.mmorpg.prototype.core.mmorpgcore.controller;
+package pl.mmorpg.prototype.core.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.mmorpg.prototype.core.mmorpgcore.configuration.Credentials;
-import pl.mmorpg.prototype.core.mmorpgcore.model.user.boundary.UserService;
+import pl.mmorpg.prototype.core.configuration.Credentials;
+import pl.mmorpg.prototype.core.service.user.boundary.UserService;
 
 @RestController
 public class RegisterController
