@@ -41,7 +41,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter
 	private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request)
 	{
 		return getUserFromAuthorizationHeader(request)
-				.map(u -> new UsernamePasswordAuthenticationToken(u, null, Collections.emptyList()))
+				.map(user -> new UsernamePasswordAuthenticationToken(user, user, Collections.emptyList()))
 				.orElse(null);
 	}
 

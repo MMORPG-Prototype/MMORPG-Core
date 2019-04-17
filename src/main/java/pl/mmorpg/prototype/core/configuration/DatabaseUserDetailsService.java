@@ -28,7 +28,7 @@ public class DatabaseUserDetailsService implements UserDetailsService
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
 	{
-		Optional<User> user = Optional.ofNullable(userService.findByUsername(username));
+		Optional<User> user = userService.findByUsername(username);
 		if (user.isEmpty())
 			throw new UsernameNotFoundException(username);
 		Collection<GrantedAuthority> grantedAuthorities = getGrantedAuthorities(user.get());
