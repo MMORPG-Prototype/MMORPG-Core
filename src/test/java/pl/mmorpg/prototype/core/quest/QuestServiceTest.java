@@ -10,12 +10,15 @@ import pl.mmorpg.prototype.core.quest.boundary.QuestService;
 import pl.mmorpg.prototype.data.entities.Quest;
 import pl.mmorpg.prototype.data.entities.repositories.QuestRepository;
 
+import javax.transaction.Transactional;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @TestPropertySource("classpath:application-test.properties")
-public class QuestServiceTest
+@Transactional
+class QuestServiceTest
 {
 	@Autowired
 	private QuestService questService;
@@ -24,7 +27,7 @@ public class QuestServiceTest
 	private QuestRepository questRepository;
 
 	@Test
-	public void test()
+	void findSavedQuest()
 	{
 		Quest quest = new Quest();
 		quest.setName("questName");
